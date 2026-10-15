@@ -1,1303 +1,901 @@
 {
-  "config": {
-    "brand_ar": "سولو سوتس",
-    "brand_en": "SOLO SUITS",
-    "tagline_ar": "أناقة بلا حدود",
-    "tagline_en": "Style of Luxury Outfits",
-    "about_ar": "يعتبر جاليري Solo Suits من أفضل برندات بيوت الأزياء العالمية في مصر من حيث جودة المعروضات بأفضل الخامات وأفضل الأسعار. نقدم لك تجربة تسوق راقية تليق بيك — بدل رسمية، قمصان، تيشيرتات، أحذية، وإكسسوارات من أرقى الماركات.",
-    "about_en": "SOLO SUITS is one of the best international fashion house brands in Egypt in terms of the quality of displayed products, with the finest fabrics and the best prices.",
-    "whatsappNumber": "201004929979",
-    "phones": [
-      { "label": "الموبايل", "number": "01004929979" }
-    ],
-    "branches": [
-      {
-        "name": "الإسكندرية",
-        "address": "96 شارع جمال عبد الناصر - تقاطع شارع محمد نجيب - الإسكندرية",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=96+شارع+جمال+عبد+الناصر+محمد+نجيب+الإسكندرية"
-      }
-    ],
+  "version": 1,
+  "updatedAt": "2026-10-15T00:00:00.000Z",
+  "settings": {
+    "storeName": "SOLO SUITS",
+    "tagline": "Style of Luxury Outfits",
+    "whatsapp": "201004929979",
+    "phone": "01004929979",
     "email": "solosuits743@gmail.com",
-    "workingHours_ar": "يومياً من 11 صباحاً حتى 12 منتصف الليل",
-    "rights_ar": "جميع الحقوق محفوظة لـ Solo Suits"
-  },
-
-  "social": {
     "facebook": "https://www.facebook.com/profile.php?id=61580442328923",
-    "messenger": "61580442328923",
-    "whatsapp": "https://wa.me/201004929979",
-    "instagram": "https://instagram.com/solo_suitss.eg"
+    "messenger": "https://m.me/61580442328923",
+    "instagram": "https://www.instagram.com/solo_suits.eg",
+    "address": "٩٦ شارع جمال عبد الناصر الرئيسي، تقاطع شارع محمد نجيب، الإسكندرية",
+    "mapQuery": "96 Gamal Abdel Nasser St, Alexandria, Egypt",
+    "currency": "ج.م"
   },
-
-  "colors": [
-    "أسود", "أبيض", "رمادي", "كحلي", "بني", "بيج",
-    "أزرق", "لبني", "أخضر", "زيتي", "أحمر", "خمري",
-    "بيج فاتح", "بني محروق", "فضي", "ذهبي"
-  ],
-
-  "sizes": ["S", "M", "L", "XL", "XXL", "XXXL"],
-
-  "featured": [
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=85",
-    "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=1200&q=85",
-    "https://images.unsplash.com/photo-1593030103066-0093718efeb9?w=1200&q=85",
-    "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1200&q=85",
-    "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=1200&q=85",
-    "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&q=85",
-    "https://images.unsplash.com/photo-1553143820-6bb68bc34679?w=1200&q=85",
-    "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=85",
-    "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=1200&q=85",
-    "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=1200&q=85"
-  ],
-
-  "offers": [
-    {
-      "id": "offer_demo_1",
-      "image": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=900&q=85",
-      "text": "حزام جلد طبيعي مجاناً عند شرائك بدلة Solo Suits"
-    },
-    {
-      "id": "offer_demo_2",
-      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=85",
-      "text": "شنطة خصر رجالي هدية عند شرائك بنطلون جينز + تيشيرت"
-    },
-    {
-      "id": "offer_demo_3",
-      "image": "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=900&q=85",
-      "text": "خصم 20% على التايير النسائي لفترة محدودة"
-    },
-    {
-      "id": "offer_demo_4",
-      "image": "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=900&q=85",
-      "text": "حذاء جلد طبيعي بسعر خاص عند شراء بدلة كاملة"
-    },
-    {
-      "id": "offer_demo_5",
-      "image": "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=900&q=85",
-      "text": "طقم كامل (بدلة + قميص + كرافيت) بخصم 25%"
-    }
-  ],
-
   "categories": [
     {
-      "id": "suits-men",
-      "icon": "👔",
-      "name_ar": "بدل رجالي",
-      "name_en": "Men's Suits",
-      "desc_ar": "بدل رجالي بأجود الأقمشة الإيطالية والتركية — تصميمات راقية تناسب كل المناسبات",
-      "homeImg": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=85",
-      "visible": true,
-      "isBestSeller": true,
-      "colors": ["أسود", "كحلي", "رمادي", "بني", "خمري"],
-      "sizes": ["S", "M", "L", "XL", "XXL", "XXXL"],
-      "products": [
-        {
-          "id": "suit_m1",
-          "name_ar": "بدلة كلاسيك سوداء",
-          "desc_ar": "بدلة رسمية كلاسيك بلون أسود — قماش إيطالي فاخر",
-          "images": [
-            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=85",
-            "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=900&q=85"
-          ],
-          "colors": ["أسود", "كحلي", "رمادي"],
-          "isBestSeller": true,
-          "sizes": [
-            { "label": "S", "price": 2500, "offerPrice": 0 },
-            { "label": "M", "price": 2500, "offerPrice": 0 },
-            { "label": "L", "price": 2600, "offerPrice": 0 },
-            { "label": "XL", "price": 2700, "offerPrice": 0 },
-            { "label": "XXL", "price": 2800, "offerPrice": 0 },
-            { "label": "XXXL", "price": 3000, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_m2",
-          "name_ar": "بدلة رسمية كحلي",
-          "desc_ar": "بدلة رسمية بلون كحلي غامق — تصميم عصري",
-          "images": [
-            "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=900&q=85"
-          ],
-          "colors": ["كحلي", "أسود", "رمادي"],
-          "sizes": [
-            { "label": "M", "price": 2600, "offerPrice": 0 },
-            { "label": "L", "price": 2700, "offerPrice": 0 },
-            { "label": "XL", "price": 2800, "offerPrice": 0 },
-            { "label": "XXL", "price": 2900, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_m3",
-          "name_ar": "بدلة سليم فِت",
-          "desc_ar": "بدلة بقصة Slim Fit عصرية — للرجل الأنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1593030103066-0093718efeb9?w=900&q=85"
-          ],
-          "colors": ["أسود", "كحلي", "رمادي", "خمري"],
-          "sizes": [
-            { "label": "S", "price": 2700, "offerPrice": 0 },
-            { "label": "M", "price": 2700, "offerPrice": 0 },
-            { "label": "L", "price": 2800, "offerPrice": 0 },
-            { "label": "XL", "price": 2900, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_m4",
-          "name_ar": "بدلة كاجوال رمادي",
-          "desc_ar": "بدلة كاجوال بلون رمادي — للاستخدام اليومي",
-          "images": [
-            "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=900&q=85"
-          ],
-          "colors": ["رمادي", "كحلي", "بني"],
-          "sizes": [
-            { "label": "M", "price": 2400, "offerPrice": 0 },
-            { "label": "L", "price": 2500, "offerPrice": 0 },
-            { "label": "XL", "price": 2600, "offerPrice": 0 },
-            { "label": "XXL", "price": 2700, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_m5",
-          "name_ar": "بدلة زفاف بيج",
-          "desc_ar": "بدلة زفاف بلون بيج فاخر — إطلالة العمر",
-          "images": [
-            "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=900&q=85"
-          ],
-          "colors": ["بيج", "بيج فاتح", "أبيض"],
-          "sizes": [
-            { "label": "S", "price": 3500, "offerPrice": 0 },
-            { "label": "M", "price": 3500, "offerPrice": 0 },
-            { "label": "L", "price": 3700, "offerPrice": 0 },
-            { "label": "XL", "price": 3900, "offerPrice": 0 },
-            { "label": "XXL", "price": 4200, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_m6",
-          "name_ar": "بدلة تركي بني",
-          "desc_ar": "بدلة تركي بلون بني فاخر — قماش عالي الجودة",
-          "images": [
-            "https://images.unsplash.com/photo-1553143820-6bb68bc34679?w=900&q=85"
-          ],
-          "colors": ["بني", "بني محروق", "بيج"],
-          "sizes": [
-            { "label": "M", "price": 2800, "offerPrice": 0 },
-            { "label": "L", "price": 2900, "offerPrice": 0 },
-            { "label": "XL", "price": 3000, "offerPrice": 0 },
-            { "label": "XXL", "price": 3200, "offerPrice": 0 }
-          ]
-        }
+      "id": "suits",
+      "name": "بدل",
+      "en": "Suits",
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
+      "subs": [
+        "بدل رسمية",
+        "بدل سواريه",
+        "سترات منفصلة",
+        "قمصان وكرافتات"
       ]
     },
     {
-      "id": "suits-women",
-      "icon": "👗",
-      "name_ar": "بدل نسائي",
-      "name_en": "Women's Suits",
-      "desc_ar": "بدل نسائي راقية بتصميمات عصرية وأقمشة فاخرة",
-      "homeImg": "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=800&q=85",
-      "visible": true,
-      "isBestSeller": true,
-      "colors": ["أسود", "أبيض", "بيج", "خمري", "كحلي"],
-      "sizes": ["S", "M", "L", "XL", "XXL"],
-      "products": [
-        {
-          "id": "suit_w1",
-          "name_ar": "بدلة نسائي كلاسيك",
-          "desc_ar": "بدلة نسائي بتصميم كلاسيكي أنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=900&q=85"
-          ],
-          "colors": ["أسود", "بيج", "خمري"],
-          "isBestSeller": true,
-          "sizes": [
-            { "label": "S", "price": 2200, "offerPrice": 0 },
-            { "label": "M", "price": 2200, "offerPrice": 0 },
-            { "label": "L", "price": 2300, "offerPrice": 0 },
-            { "label": "XL", "price": 2400, "offerPrice": 0 },
-            { "label": "XXL", "price": 2500, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_w2",
-          "name_ar": "بدلة نسائي كحلي",
-          "desc_ar": "بدلة نسائي بلون كحلي فاخر",
-          "images": [
-            "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=900&q=85"
-          ],
-          "colors": ["كحلي", "أسود", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 2400, "offerPrice": 0 },
-            { "label": "M", "price": 2400, "offerPrice": 0 },
-            { "label": "L", "price": 2500, "offerPrice": 0 },
-            { "label": "XL", "price": 2600, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_w3",
-          "name_ar": "بدلة نسائي بيج",
-          "desc_ar": "بدلة نسائي بلون بيج ناعم",
-          "images": [
-            "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=900&q=85"
-          ],
-          "colors": ["بيج", "بيج فاتح", "أبيض"],
-          "sizes": [
-            { "label": "S", "price": 2300, "offerPrice": 0 },
-            { "label": "M", "price": 2300, "offerPrice": 0 },
-            { "label": "L", "price": 2400, "offerPrice": 0 },
-            { "label": "XL", "price": 2500, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_w4",
-          "name_ar": "بدلة نسائي رسمية",
-          "desc_ar": "بدلة نسائي رسمية للعمل والمناسبات",
-          "images": [
-            "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=900&q=85"
-          ],
-          "colors": ["أسود", "كحلي", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 2500, "offerPrice": 0 },
-            { "label": "M", "price": 2500, "offerPrice": 0 },
-            { "label": "L", "price": 2600, "offerPrice": 0 },
-            { "label": "XL", "price": 2700, "offerPrice": 0 },
-            { "label": "XXL", "price": 2800, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_w5",
-          "name_ar": "بدلة نسائي خمري",
-          "desc_ar": "بدلة نسائي بلون خمري فاخر",
-          "images": [
-            "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=900&q=85"
-          ],
-          "colors": ["خمري", "أسود", "بني"],
-          "sizes": [
-            { "label": "S", "price": 2600, "offerPrice": 0 },
-            { "label": "M", "price": 2600, "offerPrice": 0 },
-            { "label": "L", "price": 2700, "offerPrice": 0 },
-            { "label": "XL", "price": 2800, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "suit_w6",
-          "name_ar": "بدلة نسائي كاجوال",
-          "desc_ar": "بدلة نسائي كاجوال للاستخدام اليومي",
-          "images": [
-            "https://images.unsplash.com/photo-1551803091-e20673f15770?w=900&q=85"
-          ],
-          "colors": ["رمادي", "بيج", "أسود"],
-          "sizes": [
-            { "label": "S", "price": 2000, "offerPrice": 0 },
-            { "label": "M", "price": 2000, "offerPrice": 0 },
-            { "label": "L", "price": 2100, "offerPrice": 0 },
-            { "label": "XL", "price": 2200, "offerPrice": 0 }
-          ]
-        }
+      "id": "men",
+      "name": "رجالي",
+      "en": "Men",
+      "image": "https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=1200&q=80",
+      "subs": [
+        "قمصان",
+        "بناطيل",
+        "جاكيتات ومعاطف",
+        "بولو وتيشرتات",
+        "أحذية"
       ]
     },
     {
-      "id": "shirts",
-      "icon": "👕",
-      "name_ar": "قمصان رجالي",
-      "name_en": "Men's Shirts",
-      "desc_ar": "قمصان رجالي بأقمشة قطنية عالية الجودة — كلاسيك وكاجوال",
-      "homeImg": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=85",
-      "visible": true,
-      "isBestSeller": true,
-      "colors": ["أبيض", "أسود", "أزرق", "لبني", "بيج", "رمادي", "كحلي", "زيتي"],
-      "sizes": ["S", "M", "L", "XL", "XXL", "XXXL"],
-      "products": [
-        {
-          "id": "sh1",
-          "name_ar": "قميص كلاسيك أبيض",
-          "desc_ar": "قميص قطن 100% بتصميم كلاسيكي أنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=900&q=85",
-            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=900&q=85"
-          ],
-          "colors": ["أبيض", "أزرق", "لبني"],
-          "isBestSeller": true,
-          "sizes": [
-            { "label": "S", "price": 550, "offerPrice": 0 },
-            { "label": "M", "price": 550, "offerPrice": 0 },
-            { "label": "L", "price": 580, "offerPrice": 0 },
-            { "label": "XL", "price": 620, "offerPrice": 0 },
-            { "label": "XXL", "price": 660, "offerPrice": 0 },
-            { "label": "XXXL", "price": 700, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "sh2",
-          "name_ar": "قميص كاجوال أزرق",
-          "desc_ar": "قميص كاجوال بخامة قطنية مريحة",
-          "images": [
-            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=900&q=85"
-          ],
-          "colors": ["أزرق", "كحلي", "رمادي"],
-          "sizes": [
-            { "label": "M", "price": 580, "offerPrice": 0 },
-            { "label": "L", "price": 600, "offerPrice": 0 },
-            { "label": "XL", "price": 640, "offerPrice": 0 },
-            { "label": "XXL", "price": 680, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "sh3",
-          "name_ar": "قميص مقلم رسمي",
-          "desc_ar": "قميص مقلم مناسب للمناسبات الرسمية",
-          "images": [
-            "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=900&q=85"
-          ],
-          "colors": ["أبيض", "أزرق", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 600, "offerPrice": 0 },
-            { "label": "M", "price": 600, "offerPrice": 0 },
-            { "label": "L", "price": 630, "offerPrice": 0 },
-            { "label": "XL", "price": 670, "offerPrice": 0 },
-            { "label": "XXL", "price": 710, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "sh4",
-          "name_ar": "قميص كتان بيج",
-          "desc_ar": "قميص كتان بلون بيج — مريح وأنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=900&q=85"
-          ],
-          "colors": ["بيج", "بيج فاتح", "أبيض"],
-          "sizes": [
-            { "label": "M", "price": 650, "offerPrice": 0 },
-            { "label": "L", "price": 680, "offerPrice": 0 },
-            { "label": "XL", "price": 720, "offerPrice": 0 },
-            { "label": "XXL", "price": 760, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "sh5",
-          "name_ar": "قميص أسود سليم فِت",
-          "desc_ar": "قميص أسود بقصة Slim Fit عصرية",
-          "images": [
-            "https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=900&q=85"
-          ],
-          "colors": ["أسود", "كحلي", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 620, "offerPrice": 0 },
-            { "label": "M", "price": 620, "offerPrice": 0 },
-            { "label": "L", "price": 650, "offerPrice": 0 },
-            { "label": "XL", "price": 690, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "sh6",
-          "name_ar": "قميص زيتي كاجوال",
-          "desc_ar": "قميص كاجوال بلون زيتي — إطلالة مميزة",
-          "images": [
-            "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=900&q=85"
-          ],
-          "colors": ["زيتي", "أخضر", "بيج"],
-          "sizes": [
-            { "label": "M", "price": 580, "offerPrice": 0 },
-            { "label": "L", "price": 610, "offerPrice": 0 },
-            { "label": "XL", "price": 650, "offerPrice": 0 },
-            { "label": "XXL", "price": 690, "offerPrice": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tshirts",
-      "icon": "👚",
-      "name_ar": "تيشيرتات",
-      "name_en": "T-Shirts",
-      "desc_ar": "تيشيرتات بأقمشة قطنية فاخرة وتصميمات عصرية",
-      "homeImg": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=85",
-      "visible": true,
-      "colors": ["أبيض", "أسود", "بني", "بيج", "كحلي", "زيتي", "رمادي"],
-      "sizes": ["S", "M", "L", "XL", "XXL", "XXXL"],
-      "products": [
-        {
-          "id": "ts1",
-          "name_ar": "تيشيرت قطن أوفر سايز",
-          "desc_ar": "تيشيرت أوفر سايز بخامة قطنية ثقيلة",
-          "images": [
-            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&q=85",
-            "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=900&q=85"
-          ],
-          "colors": ["أبيض", "أسود", "بيج", "بني"],
-          "sizes": [
-            { "label": "S", "price": 350, "offerPrice": 0 },
-            { "label": "M", "price": 350, "offerPrice": 0 },
-            { "label": "L", "price": 380, "offerPrice": 0 },
-            { "label": "XL", "price": 410, "offerPrice": 0 },
-            { "label": "XXL", "price": 440, "offerPrice": 0 },
-            { "label": "XXXL", "price": 480, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ts2",
-          "name_ar": "تيشيرت أسود بيسك",
-          "desc_ar": "تيشيرت أسود بيسك قطن 100%",
-          "images": [
-            "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=900&q=85"
-          ],
-          "colors": ["أسود", "رمادي", "كحلي"],
-          "sizes": [
-            { "label": "S", "price": 320, "offerPrice": 0 },
-            { "label": "M", "price": 320, "offerPrice": 0 },
-            { "label": "L", "price": 350, "offerPrice": 0 },
-            { "label": "XL", "price": 380, "offerPrice": 0 },
-            { "label": "XXL", "price": 410, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ts3",
-          "name_ar": "تيشيرت بيج كاجوال",
-          "desc_ar": "تيشيرت كاجوال بلون بيج ناعم",
-          "images": [
-            "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=900&q=85"
-          ],
-          "colors": ["بيج", "بيج فاتح", "أبيض"],
-          "sizes": [
-            { "label": "S", "price": 350, "offerPrice": 0 },
-            { "label": "M", "price": 350, "offerPrice": 0 },
-            { "label": "L", "price": 380, "offerPrice": 0 },
-            { "label": "XL", "price": 410, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ts4",
-          "name_ar": "تيشيرت بولو كحلي",
-          "desc_ar": "تيشيرت بولو بلون كحلي — أنيق وكاجوال",
-          "images": [
-            "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=900&q=85"
-          ],
-          "colors": ["كحلي", "أسود", "أبيض"],
-          "sizes": [
-            { "label": "M", "price": 450, "offerPrice": 0 },
-            { "label": "L", "price": 480, "offerPrice": 0 },
-            { "label": "XL", "price": 520, "offerPrice": 0 },
-            { "label": "XXL", "price": 560, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ts5",
-          "name_ar": "تيشيرت زيتي",
-          "desc_ar": "تيشيرت بلون زيتي — إطلالة مميزة",
-          "images": [
-            "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=900&q=85"
-          ],
-          "colors": ["زيتي", "أخضر", "بيج"],
-          "sizes": [
-            { "label": "M", "price": 380, "offerPrice": 0 },
-            { "label": "L", "price": 410, "offerPrice": 0 },
-            { "label": "XL", "price": 440, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ts6",
-          "name_ar": "تيشيرت بولو أبيض",
-          "desc_ar": "تيشيرت بولو أبيض كلاسيك",
-          "images": [
-            "https://images.unsplash.com/photo-1614495039656-fb0e10f0c0a9?w=900&q=85"
-          ],
-          "colors": ["أبيض", "بيج", "لبني"],
-          "sizes": [
-            { "label": "S", "price": 420, "offerPrice": 0 },
-            { "label": "M", "price": 420, "offerPrice": 0 },
-            { "label": "L", "price": 450, "offerPrice": 0 },
-            { "label": "XL", "price": 490, "offerPrice": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "pants",
-      "icon": "👖",
-      "name_ar": "بنطلونات",
-      "name_en": "Pants",
-      "desc_ar": "بنطلونات جينز وقطن بأشكال عصرية",
-      "homeImg": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&q=85",
-      "visible": true,
-      "colors": ["أزرق", "أسود", "رمادي", "كحلي", "بيج", "زيتي"],
-      "sizes": ["S", "M", "L", "XL", "XXL", "XXXL"],
-      "products": [
-        {
-          "id": "pt1",
-          "name_ar": "بنطلون جينز أزرق",
-          "desc_ar": "بنطلون جينز كلاسيك بقصة مستقيمة",
-          "images": [
-            "https://images.unsplash.com/photo-1542272604-787c3835535d?w=900&q=85"
-          ],
-          "colors": ["أزرق", "كحلي", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 650, "offerPrice": 0 },
-            { "label": "M", "price": 650, "offerPrice": 0 },
-            { "label": "L", "price": 680, "offerPrice": 0 },
-            { "label": "XL", "price": 720, "offerPrice": 0 },
-            { "label": "XXL", "price": 760, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "pt2",
-          "name_ar": "بنطلون قماش أسود",
-          "desc_ar": "بنطلون قماش رسمي بلون أسود",
-          "images": [
-            "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=900&q=85"
-          ],
-          "colors": ["أسود", "كحلي", "رمادي"],
-          "sizes": [
-            { "label": "M", "price": 700, "offerPrice": 0 },
-            { "label": "L", "price": 730, "offerPrice": 0 },
-            { "label": "XL", "price": 770, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "pt3",
-          "name_ar": "بنطلون جينز ممزق",
-          "desc_ar": "بنطلون جينز بتصميم ممزق عصري",
-          "images": [
-            "https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=900&q=85"
-          ],
-          "colors": ["أزرق", "رمادي", "كحلي"],
-          "sizes": [
-            { "label": "S", "price": 700, "offerPrice": 0 },
-            { "label": "M", "price": 700, "offerPrice": 0 },
-            { "label": "L", "price": 750, "offerPrice": 0 },
-            { "label": "XL", "price": 800, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "pt4",
-          "name_ar": "بنطلون شينو بيج",
-          "desc_ar": "بنطلون شينو بلون بيج — كاجوال أنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=900&q=85"
-          ],
-          "colors": ["بيج", "بيج فاتح", "زيتي"],
-          "sizes": [
-            { "label": "M", "price": 680, "offerPrice": 0 },
-            { "label": "L", "price": 710, "offerPrice": 0 },
-            { "label": "XL", "price": 750, "offerPrice": 0 },
-            { "label": "XXL", "price": 790, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "pt5",
-          "name_ar": "بنطلون كارجو زيتي",
-          "desc_ar": "بنطلون كارجو بلون زيتي — عملي وعصري",
-          "images": [
-            "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=900&q=85"
-          ],
-          "colors": ["زيتي", "بني", "أسود"],
-          "sizes": [
-            { "label": "M", "price": 720, "offerPrice": 0 },
-            { "label": "L", "price": 750, "offerPrice": 0 },
-            { "label": "XL", "price": 790, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "pt6",
-          "name_ar": "بنطلون جينز أسود",
-          "desc_ar": "بنطلون جينز أسود بقصة مودرن",
-          "images": [
-            "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=900&q=85"
-          ],
-          "colors": ["أسود", "رمادي", "كحلي"],
-          "sizes": [
-            { "label": "S", "price": 680, "offerPrice": 0 },
-            { "label": "M", "price": 680, "offerPrice": 0 },
-            { "label": "L", "price": 720, "offerPrice": 0 },
-            { "label": "XL", "price": 760, "offerPrice": 0 },
-            { "label": "XXL", "price": 800, "offerPrice": 0 }
-          ]
-        }
-      ]
-      ,
-    {
-      "id": "tracksuits",
-      "icon": "🏃",
-      "name_ar": "ترينجات",
-      "name_en": "Tracksuits",
-      "desc_ar": "ترينجات رياضية بأقمشة قطنية عالية الجودة — أناقة وراحة",
-      "homeImg": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=85",
-      "visible": true,
-      "colors": ["أسود", "رمادي", "كحلي", "بيج"],
-      "sizes": ["S", "M", "L", "XL", "XXL"],
-      "products": [
-        {
-          "id": "tr1",
-          "name_ar": "ترينج رياضي كامل أسود",
-          "desc_ar": "طقم ترينج رياضي كامل بخامة قطنية عالية الجودة",
-          "images": [
-            "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=85"
-          ],
-          "colors": ["أسود", "رمادي", "كحلي"],
-          "sizes": [
-            { "label": "S", "price": 850, "offerPrice": 0 },
-            { "label": "M", "price": 850, "offerPrice": 0 },
-            { "label": "L", "price": 900, "offerPrice": 0 },
-            { "label": "XL", "price": 950, "offerPrice": 0 },
-            { "label": "XXL", "price": 1000, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tr2",
-          "name_ar": "ترينج رمادي كاجوال",
-          "desc_ar": "طقم ترينج رمادي عصري",
-          "images": [
-            "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=900&q=85"
-          ],
-          "colors": ["رمادي", "أسود", "بيج"],
-          "sizes": [
-            { "label": "M", "price": 850, "offerPrice": 0 },
-            { "label": "L", "price": 900, "offerPrice": 0 },
-            { "label": "XL", "price": 950, "offerPrice": 0 },
-            { "label": "XXL", "price": 1000, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tr3",
-          "name_ar": "ترينج كحلي",
-          "desc_ar": "ترينج بلون كحلي فاخر",
-          "images": [
-            "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=900&q=85"
-          ],
-          "colors": ["كحلي", "أسود", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 880, "offerPrice": 0 },
-            { "label": "M", "price": 880, "offerPrice": 0 },
-            { "label": "L", "price": 930, "offerPrice": 0 },
-            { "label": "XL", "price": 980, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tr4",
-          "name_ar": "ترينج بيج ناعم",
-          "desc_ar": "ترينج بلون بيج ناعم — إطلالة راقية",
-          "images": [
-            "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=900&q=85"
-          ],
-          "colors": ["بيج", "بيج فاتح", "أبيض"],
-          "sizes": [
-            { "label": "M", "price": 870, "offerPrice": 0 },
-            { "label": "L", "price": 920, "offerPrice": 0 },
-            { "label": "XL", "price": 970, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tr5",
-          "name_ar": "ترينج شتوي أسود",
-          "desc_ar": "ترينج شتوي بخامة ثقيلة دافئة",
-          "images": [
-            "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=900&q=85"
-          ],
-          "colors": ["أسود", "رمادي", "كحلي"],
-          "sizes": [
-            { "label": "M", "price": 1100, "offerPrice": 0 },
-            { "label": "L", "price": 1150, "offerPrice": 0 },
-            { "label": "XL", "price": 1200, "offerPrice": 0 },
-            { "label": "XXL", "price": 1250, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tr6",
-          "name_ar": "ترينج صيفي رمادي",
-          "desc_ar": "ترينج صيفي خفيف بلون رمادي",
-          "images": [
-            "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=900&q=85"
-          ],
-          "colors": ["رمادي", "بيج", "أبيض"],
-          "sizes": [
-            { "label": "S", "price": 750, "offerPrice": 0 },
-            { "label": "M", "price": 750, "offerPrice": 0 },
-            { "label": "L", "price": 800, "offerPrice": 0 },
-            { "label": "XL", "price": 850, "offerPrice": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tier-women",
-      "icon": "👚",
-      "name_ar": "تايير نسائي",
-      "name_en": "Women's Tier",
-      "desc_ar": "تايير نسائي راقي بأقمشة فاخرة وتصميمات عصرية",
-      "homeImg": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=800&q=85",
-      "visible": true,
-      "isBestSeller": true,
-      "colors": ["أسود", "بيج", "خمري", "كحلي", "أبيض"],
-      "sizes": ["XS", "S", "M", "L", "XL"],
-      "products": [
-        {
-          "id": "tw1",
-          "name_ar": "تايير نسائي كلاسيك",
-          "desc_ar": "تايير نسائي بتصميم كلاسيكي أنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=900&q=85"
-          ],
-          "colors": ["أسود", "بيج", "خمري"],
-          "isBestSeller": true,
-          "sizes": [
-            { "label": "XS", "price": 1500, "offerPrice": 0 },
-            { "label": "S", "price": 1500, "offerPrice": 0 },
-            { "label": "M", "price": 1550, "offerPrice": 0 },
-            { "label": "L", "price": 1600, "offerPrice": 0 },
-            { "label": "XL", "price": 1650, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tw2",
-          "name_ar": "تايير نسائي كحلي",
-          "desc_ar": "تايير نسائي بلون كحلي فاخر",
-          "images": [
-            "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=900&q=85"
-          ],
-          "colors": ["كحلي", "أسود", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 1600, "offerPrice": 0 },
-            { "label": "M", "price": 1600, "offerPrice": 0 },
-            { "label": "L", "price": 1650, "offerPrice": 0 },
-            { "label": "XL", "price": 1700, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tw3",
-          "name_ar": "تايير نسائي خمري",
-          "desc_ar": "تايير نسائي بلون خمري غامق",
-          "images": [
-            "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=900&q=85"
-          ],
-          "colors": ["خمري", "أسود", "بني"],
-          "sizes": [
-            { "label": "XS", "price": 1550, "offerPrice": 0 },
-            { "label": "S", "price": 1550, "offerPrice": 0 },
-            { "label": "M", "price": 1600, "offerPrice": 0 },
-            { "label": "L", "price": 1650, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tw4",
-          "name_ar": "تايير نسائي رسمي",
-          "desc_ar": "تايير نسائي رسمي للمناسبات",
-          "images": [
-            "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=900&q=85"
-          ],
-          "colors": ["أسود", "كحلي", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 1700, "offerPrice": 0 },
-            { "label": "M", "price": 1700, "offerPrice": 0 },
-            { "label": "L", "price": 1750, "offerPrice": 0 },
-            { "label": "XL", "price": 1800, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tw5",
-          "name_ar": "تايير نسائي بيج",
-          "desc_ar": "تايير نسائي بلون بيج ناعم",
-          "images": [
-            "https://images.unsplash.com/photo-1551803091-e20673f15770?w=900&q=85"
-          ],
-          "colors": ["بيج", "بيج فاتح", "أبيض"],
-          "sizes": [
-            { "label": "XS", "price": 1450, "offerPrice": 0 },
-            { "label": "S", "price": 1450, "offerPrice": 0 },
-            { "label": "M", "price": 1500, "offerPrice": 0 },
-            { "label": "L", "price": 1550, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "tw6",
-          "name_ar": "تايير نسائي كاجوال",
-          "desc_ar": "تايير نسائي كاجوال للاستخدام اليومي",
-          "images": [
-            "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=85"
-          ],
-          "colors": ["رمادي", "بيج", "أسود"],
-          "sizes": [
-            { "label": "S", "price": 1350, "offerPrice": 0 },
-            { "label": "M", "price": 1350, "offerPrice": 0 },
-            { "label": "L", "price": 1400, "offerPrice": 0 },
-            { "label": "XL", "price": 1450, "offerPrice": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "belts",
-      "icon": "🪢",
-      "name_ar": "أحزمة",
-      "name_en": "Belts",
-      "desc_ar": "أحزمة جلد طبيعي فاخرة — تصميمات راقية",
-      "homeImg": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=85",
-      "visible": true,
-      "colors": ["بني", "أسود", "بيج"],
-      "sizes": ["Standard"],
-      "products": [
-        {
-          "id": "bt1",
-          "name_ar": "حزام جلد طبيعي بني",
-          "desc_ar": "حزام جلد طبيعي فاخر — إبزيم ستانلس ستيل",
-          "images": [
-            "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=900&q=85"
-          ],
-          "colors": ["بني", "أسود", "بيج"],
-          "sizes": [
-            { "label": "Standard", "price": 450, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bt2",
-          "name_ar": "حزام جلد أسود",
-          "desc_ar": "حزام جلد أسود كلاسيك",
-          "images": [
-            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=85"
-          ],
-          "colors": ["أسود", "بني"],
-          "sizes": [
-            { "label": "Standard", "price": 480, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bt3",
-          "name_ar": "حزام إبزيم ذهبي",
-          "desc_ar": "حزام جلد بإبزيم ذهبي فاخر",
-          "images": [
-            "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85"
-          ],
-          "colors": ["بني", "أسود"],
-          "sizes": [
-            { "label": "Standard", "price": 520, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bt4",
-          "name_ar": "حزام كاجوال بيج",
-          "desc_ar": "حزام جلد بلون بيج — كاجوال أنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=900&q=85"
-          ],
-          "colors": ["بيج", "بني"],
-          "sizes": [
-            { "label": "Standard", "price": 420, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bt5",
-          "name_ar": "حزام سهرة أسود",
-          "desc_ar": "حزام سهرة بإبزيم لامع — للبدل الرسمية",
-          "images": [
-            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=85"
-          ],
-          "colors": ["أسود", "فضي", "ذهبي"],
-          "sizes": [
-            { "label": "Standard", "price": 600, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bt6",
-          "name_ar": "حزام جلد مضفر",
-          "desc_ar": "حزام جلد مضفر بتصميم عصري",
-          "images": [
-            "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85"
-          ],
-          "colors": ["بني", "أسود"],
-          "sizes": [
-            { "label": "Standard", "price": 550, "offerPrice": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "waist-bags",
-      "icon": "🎒",
-      "name_ar": "شنط خصر رجالي",
-      "name_en": "Men's Waist Bags",
-      "desc_ar": "شنط خصر رجالي عصرية — عملية وأنيقة",
-      "homeImg": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=85",
-      "visible": true,
-      "colors": ["أسود", "بني", "رمادي", "كحلي"],
-      "sizes": ["One Size"],
-      "products": [
-        {
-          "id": "wb1",
-          "name_ar": "شنطة خصر رجالي جلد أسود",
-          "desc_ar": "شنطة خصر جلد طبيعي — عملية وأنيقة",
-          "images": [
-            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=85"
-          ],
-          "colors": ["أسود", "بني", "كحلي"],
-          "sizes": [
-            { "label": "One Size", "price": 550, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "wb2",
-          "name_ar": "شنطة خصر جلد بني",
-          "desc_ar": "شنطة خصر جلد طبيعي بلون بني",
-          "images": [
-            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900&q=85"
-          ],
-          "colors": ["بني", "أسود"],
-          "sizes": [
-            { "label": "One Size", "price": 580, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "wb3",
-          "name_ar": "شنطة خصر قماش رمادي",
-          "desc_ar": "شنطة خصر قماشية عملية",
-          "images": [
-            "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=900&q=85"
-          ],
-          "colors": ["رمادي", "أسود", "كحلي"],
-          "sizes": [
-            { "label": "One Size", "price": 420, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "wb4",
-          "name_ar": "شنطة خصر رياضية",
-          "desc_ar": "شنطة خصر رياضية خفيفة",
-          "images": [
-            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=85"
-          ],
-          "colors": ["أسود", "كحلي"],
-          "sizes": [
-            { "label": "One Size", "price": 350, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "wb5",
-          "name_ar": "شنطة خصر جلد فاخرة",
-          "desc_ar": "شنطة خصر جلد فاخر بتصميم راقي",
-          "images": [
-            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900&q=85"
-          ],
-          "colors": ["أسود", "بني"],
-          "sizes": [
-            { "label": "One Size", "price": 700, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "wb6",
-          "name_ar": "شنطة خصر كاجوال",
-          "desc_ar": "شنطة خصر كاجوال للاستخدام اليومي",
-          "images": [
-            "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=900&q=85"
-          ],
-          "colors": ["رمادي", "بني", "أسود"],
-          "sizes": [
-            { "label": "One Size", "price": 480, "offerPrice": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "handbags",
-      "icon": "👜",
-      "name_ar": "حقائب يد نسائية",
-      "name_en": "Women's Handbags",
-      "desc_ar": "حقائب يد نسائية فاخرة — تصاميم عصرية راقية",
-      "homeImg": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=85",
-      "visible": true,
-      "isBestSeller": true,
-      "colors": ["أسود", "بني", "بيج", "خمري"],
-      "sizes": ["One Size"],
-      "products": [
-        {
-          "id": "hb1",
-          "name_ar": "حقيبة يد جلد أسود",
-          "desc_ar": "حقيبة يد جلد طبيعي بتصميم أنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900&q=85"
-          ],
-          "colors": ["أسود", "بني", "بيج"],
-          "isBestSeller": true,
-          "sizes": [
-            { "label": "One Size", "price": 850, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "hb2",
-          "name_ar": "حقيبة يد جلد بني",
-          "desc_ar": "حقيبة يد جلد طبيعي بلون بني",
-          "images": [
-            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900&q=85"
-          ],
-          "colors": ["بني", "بيج"],
-          "sizes": [
-            { "label": "One Size", "price": 900, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "hb3",
-          "name_ar": "حقيبة يد سهرة",
-          "desc_ar": "حقيبة يد سهرة صغيرة فاخرة",
-          "images": [
-            "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=900&q=85"
-          ],
-          "colors": ["أسود", "خمري", "ذهبي"],
-          "sizes": [
-            { "label": "One Size", "price": 750, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "hb4",
-          "name_ar": "حقيبة يد كتف",
-          "desc_ar": "حقيبة يد كتف عملية وأنيقة",
-          "images": [
-            "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900&q=85"
-          ],
-          "colors": ["بني", "أسود"],
-          "sizes": [
-            { "label": "One Size", "price": 680, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "hb5",
-          "name_ar": "حقيبة يد فاخرة",
-          "desc_ar": "حقيبة يد فاخرة بتصميم راقي",
-          "images": [
-            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900&q=85"
-          ],
-          "colors": ["أسود", "بني", "خمري"],
-          "sizes": [
-            { "label": "One Size", "price": 1100, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "hb6",
-          "name_ar": "حقيبة يد يومية",
-          "desc_ar": "حقيبة يد يومية عملية",
-          "images": [
-            "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=900&q=85"
-          ],
-          "colors": ["بيج", "بني", "أسود"],
-          "sizes": [
-            { "label": "One Size", "price": 600, "offerPrice": 0 }
-          ]
-        }
+      "id": "women",
+      "name": "نسائي",
+      "en": "Women",
+      "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "subs": [
+        "فساتين",
+        "بلوزات وقمصان",
+        "بدل وبليزر",
+        "معاطف",
+        "أحذية وحقائب"
       ]
     }
-    ,
+  ],
+  "featured": [
     {
-      "id": "leather-shoes",
-      "icon": "👞",
-      "name_ar": "أحذية جلد طبيعي",
-      "name_en": "Leather Shoes",
-      "desc_ar": "أحذية جلد طبيعي فاخرة — تصميمات راقية بجودة عالية",
-      "homeImg": "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=800&q=85",
-      "visible": true,
-      "isBestSeller": true,
-      "colors": ["بني", "أسود", "بيج"],
-      "sizes": ["40", "41", "42", "43", "44", "45"],
-      "products": [
-        {
-          "id": "ls1",
-          "name_ar": "حذاء جلد كلاسيك بني",
-          "desc_ar": "حذاء جلد طبيعي بني بتصميم كلاسيكي أنيق",
-          "images": [
-            "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=900&q=85"
-          ],
-          "colors": ["بني", "أسود", "بيج"],
-          "isBestSeller": true,
-          "sizes": [
-            { "label": "40", "price": 950, "offerPrice": 0 },
-            { "label": "41", "price": 950, "offerPrice": 0 },
-            { "label": "42", "price": 1000, "offerPrice": 0 },
-            { "label": "43", "price": 1050, "offerPrice": 0 },
-            { "label": "44", "price": 1100, "offerPrice": 0 },
-            { "label": "45", "price": 1150, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ls2",
-          "name_ar": "حذاء جلد أسود رسمي",
-          "desc_ar": "حذاء جلد طبيعي أسود — للبدل الرسمية",
-          "images": [
-            "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=900&q=85"
-          ],
-          "colors": ["أسود", "بني"],
-          "sizes": [
-            { "label": "40", "price": 1000, "offerPrice": 0 },
-            { "label": "41", "price": 1000, "offerPrice": 0 },
-            { "label": "42", "price": 1050, "offerPrice": 0 },
-            { "label": "43", "price": 1100, "offerPrice": 0 },
-            { "label": "44", "price": 1150, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ls3",
-          "name_ar": "حذاء جلد كاجوال بني",
-          "desc_ar": "حذاء جلد كاجوال بتصميم عصري",
-          "images": [
-            "https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?w=900&q=85"
-          ],
-          "colors": ["بني", "بيج"],
-          "sizes": [
-            { "label": "40", "price": 900, "offerPrice": 0 },
-            { "label": "41", "price": 900, "offerPrice": 0 },
-            { "label": "42", "price": 950, "offerPrice": 0 },
-            { "label": "43", "price": 1000, "offerPrice": 0 },
-            { "label": "44", "price": 1050, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ls4",
-          "name_ar": "حذاء جلد أوكسفورد",
-          "desc_ar": "حذاء أوكسفورد جلد طبيعي فاخر",
-          "images": [
-            "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=900&q=85"
-          ],
-          "colors": ["أسود", "بني"],
-          "sizes": [
-            { "label": "40", "price": 1200, "offerPrice": 0 },
-            { "label": "41", "price": 1200, "offerPrice": 0 },
-            { "label": "42", "price": 1250, "offerPrice": 0 },
-            { "label": "43", "price": 1300, "offerPrice": 0 },
-            { "label": "44", "price": 1350, "offerPrice": 0 },
-            { "label": "45", "price": 1400, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ls5",
-          "name_ar": "حذاء جلد لوف",
-          "desc_ar": "حذاء لوف جلد طبيعي كاجوال",
-          "images": [
-            "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=900&q=85"
-          ],
-          "colors": ["بني", "بيج", "أسود"],
-          "sizes": [
-            { "label": "40", "price": 850, "offerPrice": 0 },
-            { "label": "41", "price": 850, "offerPrice": 0 },
-            { "label": "42", "price": 900, "offerPrice": 0 },
-            { "label": "43", "price": 950, "offerPrice": 0 },
-            { "label": "44", "price": 1000, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "ls6",
-          "name_ar": "حذاء جلد سهرة",
-          "desc_ar": "حذاء سهرة جلد لامع — للبدل الرسمية",
-          "images": [
-            "https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?w=900&q=85"
-          ],
-          "colors": ["أسود", "بني"],
-          "sizes": [
-            { "label": "40", "price": 1400, "offerPrice": 0 },
-            { "label": "41", "price": 1400, "offerPrice": 0 },
-            { "label": "42", "price": 1450, "offerPrice": 0 },
-            { "label": "43", "price": 1500, "offerPrice": 0 },
-            { "label": "44", "price": 1550, "offerPrice": 0 },
-            { "label": "45", "price": 1600, "offerPrice": 0 }
-          ]
-        }
-      ]
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
+      "title": "مجموعة البدل الرسمية",
+      "sub": "تفصيل كلاسيكي بخامات فاخرة",
+      "link": "#/c/suits"
     },
     {
-      "id": "boxers",
-      "icon": "🩲",
-      "name_ar": "بوكسرات",
-      "name_en": "Boxers",
-      "desc_ar": "بوكسرات قطنية مريحة بأشكال عصرية",
-      "homeImg": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=85",
-      "visible": true,
-      "colors": ["أسود", "أبيض", "رمادي", "كحلي", "بني"],
-      "sizes": ["S", "M", "L", "XL", "XXL"],
-      "products": [
+      "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80",
+      "title": "إطلالة المساء",
+      "sub": "فساتين سواريه",
+      "link": "#/c/women"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1000&q=80",
+      "title": "سليم فيت",
+      "sub": "قصّات عصرية",
+      "link": "#/c/suits"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1000&q=80",
+      "title": "كاجوال راقٍ",
+      "sub": "جاكيتات ومعاطف رجالي",
+      "link": "#/c/men"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1000&q=80",
+      "title": "معاطف الموسم",
+      "sub": "دفء وأناقة",
+      "link": "#/c/women"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=80",
+      "title": "أناقة الصباح",
+      "sub": "قمصان وبناطيل",
+      "link": "#/c/men"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80",
+      "title": "بدلة نسائية",
+      "sub": "بليزر وبنطلون",
+      "link": "#/c/women"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1000&q=80",
+      "title": "السواريه",
+      "sub": "للمناسبات الكبيرة",
+      "link": "#/c/suits"
+    }
+  ],
+  "products": [
+    {
+      "id": "s1",
+      "name": "بدلة سوداء كلاسيك",
+      "category": "suits",
+      "sub": "بدل رسمية",
+      "price": 6900,
+      "offers": {
+        "*": 5900
+      },
+      "sizes": [
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56"
+      ],
+      "colors": [
         {
-          "id": "bx1",
-          "name_ar": "طقم بوكسرات (3 قطع)",
-          "desc_ar": "طقم بوكسرات قطنية مريحة - 3 قطع",
+          "name": "أسود",
+          "hex": "#111111",
           "images": [
-            "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=900&q=85"
-          ],
-          "colors": ["أسود", "رمادي", "أبيض"],
-          "sizes": [
-            { "label": "S", "price": 350, "offerPrice": 0 },
-            { "label": "M", "price": 350, "offerPrice": 0 },
-            { "label": "L", "price": 380, "offerPrice": 0 },
-            { "label": "XL", "price": 410, "offerPrice": 0 },
-            { "label": "XXL", "price": 440, "offerPrice": 0 }
+            "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=900&q=80"
           ]
         },
         {
-          "id": "bx2",
-          "name_ar": "طقم بوكسرات (5 قطع)",
-          "desc_ar": "طقم بوكسرات فاخرة - 5 قطع",
+          "name": "كحلي غامق",
+          "hex": "#1b2238",
           "images": [
-            "https://images.unsplash.com/photo-1582966772680-860e372bb558?w=900&q=85"
-          ],
-          "colors": ["أسود", "رمادي", "كحلي"],
-          "sizes": [
-            { "label": "S", "price": 550, "offerPrice": 0 },
-            { "label": "M", "price": 550, "offerPrice": 0 },
-            { "label": "L", "price": 580, "offerPrice": 0 },
-            { "label": "XL", "price": 620, "offerPrice": 0 },
-            { "label": "XXL", "price": 660, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bx3",
-          "name_ar": "بوكسر قطن أسود",
-          "desc_ar": "بوكسر قطن أسود مريح",
-          "images": [
-            "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=900&q=85"
-          ],
-          "colors": ["أسود", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 150, "offerPrice": 0 },
-            { "label": "M", "price": 150, "offerPrice": 0 },
-            { "label": "L", "price": 170, "offerPrice": 0 },
-            { "label": "XL", "price": 190, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bx4",
-          "name_ar": "بوكسر قطن أبيض",
-          "desc_ar": "بوكسر قطن أبيض مريح",
-          "images": [
-            "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=900&q=85"
-          ],
-          "colors": ["أبيض", "رمادي"],
-          "sizes": [
-            { "label": "S", "price": 150, "offerPrice": 0 },
-            { "label": "M", "price": 150, "offerPrice": 0 },
-            { "label": "L", "price": 170, "offerPrice": 0 },
-            { "label": "XL", "price": 190, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bx5",
-          "name_ar": "بوكسر قطن كحلي",
-          "desc_ar": "بوكسر قطن بلون كحلي",
-          "images": [
-            "https://images.unsplash.com/photo-1582966772680-860e372bb558?w=900&q=85"
-          ],
-          "colors": ["كحلي", "أسود"],
-          "sizes": [
-            { "label": "S", "price": 160, "offerPrice": 0 },
-            { "label": "M", "price": 160, "offerPrice": 0 },
-            { "label": "L", "price": 180, "offerPrice": 0 },
-            { "label": "XL", "price": 200, "offerPrice": 0 }
-          ]
-        },
-        {
-          "id": "bx6",
-          "name_ar": "طقم بوكسرات فاخر (7 قطع)",
-          "desc_ar": "طقم بوكسرات فاخر - 7 قطع بألوان متنوعة",
-          "images": [
-            "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=900&q=85"
-          ],
-          "colors": ["أسود", "رمادي", "كحلي", "أبيض"],
-          "sizes": [
-            { "label": "S", "price": 750, "offerPrice": 0 },
-            { "label": "M", "price": 750, "offerPrice": 0 },
-            { "label": "L", "price": 800, "offerPrice": 0 },
-            { "label": "XL", "price": 850, "offerPrice": 0 },
-            { "label": "XXL", "price": 900, "offerPrice": 0 }
+            "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=80"
           ]
         }
-      ]
+      ],
+      "desc": "بدلة بقصة كلاسيكية من صوف مخلوط، بطانة حرير وتفصيل مريح على الكتف.",
+      "isNew": true,
+      "hidden": false
+    },
+    {
+      "id": "s2",
+      "name": "بدلة كحلي سليم فيت",
+      "category": "suits",
+      "sub": "بدل رسمية",
+      "price": 6500,
+      "offers": {},
+      "sizes": [
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56"
+      ],
+      "colors": [
+        {
+          "name": "كحلي",
+          "hex": "#1c2540",
+          "images": [
+            "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "رمادي",
+          "hex": "#5a5d63",
+          "images": [
+            "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "قصة سليم فيت عصرية، قماش خفيف مناسب لكل المواسم.",
+      "isNew": true,
+      "hidden": false
+    },
+    {
+      "id": "s3",
+      "name": "بدلة رمادي فحمي",
+      "category": "suits",
+      "sub": "بدل رسمية",
+      "price": 7200,
+      "offers": {
+        "50": 6400,
+        "52": 6400
+      },
+      "sizes": [
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56"
+      ],
+      "colors": [
+        {
+          "name": "رمادي فحمي",
+          "hex": "#3a3a3d",
+          "images": [
+            "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "لون فحمي هادئ للاجتماعات والمناسبات الرسمية.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "s4",
+      "name": "بدلة سواريه بياقة ستان",
+      "category": "suits",
+      "sub": "بدل سواريه",
+      "price": 9500,
+      "offers": {},
+      "sizes": [
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56"
+      ],
+      "colors": [
+        {
+          "name": "أسود",
+          "hex": "#0b0b0b",
+          "images": [
+            "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "ياقة ستان لامعة وقصة نحيفة لحفلات الزفاف والسهرات.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "s5",
+      "name": "بدلة بيج صيفية",
+      "category": "suits",
+      "sub": "بدل رسمية",
+      "price": 6200,
+      "offers": {
+        "*": 5500
+      },
+      "sizes": [
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56"
+      ],
+      "colors": [
+        {
+          "name": "بيج",
+          "hex": "#cdbfa6",
+          "images": [
+            "https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "كتان مخلوط خفيف، بطانة جزئية وحركة مريحة في الصيف.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "s6",
+      "name": "بليزر كحلي منفصل",
+      "category": "suits",
+      "sub": "سترات منفصلة",
+      "price": 3900,
+      "offers": {},
+      "sizes": [
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56"
+      ],
+      "colors": [
+        {
+          "name": "كحلي",
+          "hex": "#1c2540",
+          "images": [
+            "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "رمادي",
+          "hex": "#6b6e75",
+          "images": [
+            "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "يلبس مع بنطلون قماش أو جينز غامق، بقصة مرنة.",
+      "isNew": true,
+      "hidden": false
+    },
+    {
+      "id": "s7",
+      "name": "بدلة مقلم رصاصي",
+      "category": "suits",
+      "sub": "بدل رسمية",
+      "price": 7800,
+      "offers": {},
+      "sizes": [
+        "46",
+        "48",
+        "50",
+        "52",
+        "54",
+        "56"
+      ],
+      "colors": [
+        {
+          "name": "رصاصي مقلم",
+          "hex": "#4a4c52",
+          "images": [
+            "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "قماش مقلم دقيق بحضور واضح، مناسب لبيئة العمل.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "s8",
+      "name": "قميص رسمي أبيض",
+      "category": "suits",
+      "sub": "قمصان وكرافتات",
+      "price": 1100,
+      "offers": {
+        "*": 890
+      },
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "colors": [
+        {
+          "name": "أبيض",
+          "hex": "#f4f4f4",
+          "images": [
+            "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "سماوي فاتح",
+          "hex": "#cfdcec",
+          "images": [
+            "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "قطن مصري ناعم، ياقة ثابتة وكم طويل بأزرار صدفية.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "m1",
+      "name": "قميص أكسفورد أبيض",
+      "category": "men",
+      "sub": "قمصان",
+      "price": 950,
+      "offers": {},
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "أبيض",
+          "hex": "#f4f4f4",
+          "images": [
+            "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "أزرق سماوي",
+          "hex": "#aebfd6",
+          "images": [
+            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "نسيج أكسفورد سميك قليلًا، يلبس رسمي أو مفتوح.",
+      "isNew": true,
+      "hidden": false
+    },
+    {
+      "id": "m2",
+      "name": "قميص كتان بيج",
+      "category": "men",
+      "sub": "قمصان",
+      "price": 890,
+      "offers": {
+        "M": 690,
+        "L": 690
+      },
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "بيج",
+          "hex": "#d3c6ad",
+          "images": [
+            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "كتان طبيعي يتنفس في الحر، قصة مريحة.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "m3",
+      "name": "بنطلون قماش رمادي",
+      "category": "men",
+      "sub": "بناطيل",
+      "price": 1250,
+      "offers": {},
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "colors": [
+        {
+          "name": "رمادي",
+          "hex": "#6a6c70",
+          "images": [
+            "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "قصة مستقيمة بخصر مريح وثنية أمامية واحدة.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "m4",
+      "name": "بنطلون شينو كحلي",
+      "category": "men",
+      "sub": "بناطيل",
+      "price": 1050,
+      "offers": {
+        "*": 850
+      },
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "colors": [
+        {
+          "name": "كحلي",
+          "hex": "#1f2a44",
+          "images": [
+            "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "زيتي",
+          "hex": "#4f5a3a",
+          "images": [
+            "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "قطن مطاطي خفيف، يناسب العمل واليوم المفتوح.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "m5",
+      "name": "جاكيت جلد أسود",
+      "category": "men",
+      "sub": "جاكيتات ومعاطف",
+      "price": 3400,
+      "offers": {},
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "أسود",
+          "hex": "#101010",
+          "images": [
+            "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "جلد طبيعي ناعم مع بطانة داخلية وسوستة معدنية.",
+      "isNew": true,
+      "hidden": false
+    },
+    {
+      "id": "m6",
+      "name": "معطف صوف طويل",
+      "category": "men",
+      "sub": "جاكيتات ومعاطف",
+      "price": 4800,
+      "offers": {
+        "*": 4200
+      },
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "رمادي",
+          "hex": "#5d5f64",
+          "images": [
+            "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "أسود",
+          "hex": "#101010",
+          "images": [
+            "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "صوف مخلوط دافئ بقصة فوق الركبة.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "m7",
+      "name": "بولو بيكيه أسود",
+      "category": "men",
+      "sub": "بولو وتيشرتات",
+      "price": 720,
+      "offers": {},
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "أسود",
+          "hex": "#101010",
+          "images": [
+            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "أبيض",
+          "hex": "#f4f4f4",
+          "images": [
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "بيكيه قطن ناعم بياقة تحافظ على شكلها.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "m8",
+      "name": "حذاء أوكسفورد جلد",
+      "category": "men",
+      "sub": "أحذية",
+      "price": 2600,
+      "offers": {
+        "43": 2200,
+        "44": 2200
+      },
+      "sizes": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        {
+          "name": "أسود",
+          "hex": "#0c0c0c",
+          "images": [
+            "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "بني",
+          "hex": "#4a2f1d",
+          "images": [
+            "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "جلد طبيعي بنعل جلد مخيط، ممتاز مع البدل.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "w1",
+      "name": "فستان سواريه أسود",
+      "category": "women",
+      "sub": "فساتين",
+      "price": 4200,
+      "offers": {
+        "*": 3600
+      },
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "أسود",
+          "hex": "#0c0c0c",
+          "images": [
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "قصة انسيابية بظهر مفتوح قليلًا، قماش كريب فاخر.",
+      "isNew": true,
+      "hidden": false
+    },
+    {
+      "id": "w2",
+      "name": "فستان ميدي كلاسيك",
+      "category": "women",
+      "sub": "فساتين",
+      "price": 2900,
+      "offers": {},
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "عنابي",
+          "hex": "#6a1e2c",
+          "images": [
+            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "أسود",
+          "hex": "#0c0c0c",
+          "images": [
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "طول ميدي وخصر مضبوط، يلبس نهارًا ومساءً.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "w3",
+      "name": "بدلة نسائية بليزر وبنطلون",
+      "category": "women",
+      "sub": "بدل وبليزر",
+      "price": 4600,
+      "offers": {},
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "كحلي",
+          "hex": "#1c2540",
+          "images": [
+            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "بيج",
+          "hex": "#cdbfa6",
+          "images": [
+            "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "بليزر بكتف مرتب وبنطلون واسع من نفس القماش.",
+      "isNew": true,
+      "hidden": false
+    },
+    {
+      "id": "w4",
+      "name": "بلوزة ساتان",
+      "category": "women",
+      "sub": "بلوزات وقمصان",
+      "price": 1350,
+      "offers": {
+        "M": 990,
+        "L": 990
+      },
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "عاجي",
+          "hex": "#ece4d3",
+          "images": [
+            "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "أسود",
+          "hex": "#0c0c0c",
+          "images": [
+            "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "ساتان ناعم بلمعة هادئة وأزرار مخفية.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "w5",
+      "name": "معطف كاميل طويل",
+      "category": "women",
+      "sub": "معاطف",
+      "price": 5200,
+      "offers": {},
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "كاميل",
+          "hex": "#b08d62",
+          "images": [
+            "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "معطف صوف دافئ بحزام وجيوب جانبية.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "w6",
+      "name": "بنطلون واسع قماش",
+      "category": "women",
+      "sub": "بلوزات وقمصان",
+      "price": 1500,
+      "offers": {
+        "*": 1200
+      },
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "أسود",
+          "hex": "#0c0c0c",
+          "images": [
+            "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "رمادي",
+          "hex": "#7b7d82",
+          "images": [
+            "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "قصة واسعة بخصر عالٍ وحركة مريحة.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "w7",
+      "name": "حقيبة يد جلد",
+      "category": "women",
+      "sub": "أحذية وحقائب",
+      "price": 2800,
+      "offers": {},
+      "sizes": [
+        "مقاس واحد"
+      ],
+      "colors": [
+        {
+          "name": "أسود",
+          "hex": "#0c0c0c",
+          "images": [
+            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80"
+          ]
+        },
+        {
+          "name": "بني",
+          "hex": "#4a2f1d",
+          "images": [
+            "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "جلد طبيعي بتفاصيل معدنية ومساحة تتسع للأساسيات.",
+      "isNew": false,
+      "hidden": false
+    },
+    {
+      "id": "w8",
+      "name": "حذاء كعب عالي",
+      "category": "women",
+      "sub": "أحذية وحقائب",
+      "price": 2300,
+      "offers": {},
+      "sizes": [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        {
+          "name": "أسود",
+          "hex": "#0c0c0c",
+          "images": [
+            "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      ],
+      "desc": "كعب ثابت مريح بطول 8 سم وبطانة جلد.",
+      "isNew": false,
+      "hidden": false
     }
- 
+  ]
+}
