@@ -330,7 +330,7 @@ function footerHTML() {
   return '<footer class="foot"><img src="assets/images/logo-light.png" alt="SOLO SUITS">' +
     '<p class="foot-tag"><b>S</b>TYLE <b>O</b>F <b>L</b>UXURY <b>O</b>UTFITS</p>' +
     '<address>' + esc(s.address) + '</address>' +
-    '<a class="btn btn-line" style="border-color:#fff;color:#fff" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.mapQuery || s.address) + '">' + svg('pin') + ' افتح الموقع على الخريطة</a>' +
+    '<a class="btn btn-line" style="border-color:#fff;color:#fff" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.mapQuery || s.address) + '">' + svg('pin') + ' الموقع على الخريطة</a>' +
     '<div class="foot-links">' +
     '<a href="' + waLink('أهلاً SOLO SUITS، عندي استفسار') + '" target="_blank" rel="noopener" aria-label="واتساب">' + svg('wa') + '</a>' +
     '<a href="tel:' + esc(s.phone) + '" aria-label="اتصال">' + svg('phone') + '</a>' +
@@ -355,8 +355,8 @@ function home() {
   const offers = visible().filter((p) => bestOffer(p) != null);
   app.innerHTML =
     '<section class="hero"><div class="hero-frame"><img class="hero-img" src="assets/images/banner.jpg" alt="SOLO SUITS — Style of Luxury Outfits" decoding="async"></div>' +
-    '<div class="hero-copy"><p class="hero-line">بدل وأزياء رجالي ونسائي بتفصيل راقٍ، في قلب الإسكندرية.</p>' +
-    '<div class="hero-actions"><a class="btn btn-solid" href="#/c/suits">تسوّق البدل</a><a class="btn btn-line" href="#/offers">عروض وخصومات</a></div></div></section>' +
+    '<div class="hero-copy"><p class="hero-line">أرقى خطوط الموضه العالميه بالإسكندرية </p>' +
+    '<div class="hero-actions"><a class="btn btn-solid" href="#/c/suits"> شغف لا ينتهي </a><a class="btn btn-line" href="#/offers">عروض وخصومات</a></div></div></section>' +
     '<section class="block"><header class="block-head"><h2>الصور المميزة</h2><p>اختيارات الموسم، اسحب لتتصفح.</p></header><div class="cf" id="cfFeatured"></div></section>' +
     '<section class="block"><header class="block-head"><h2>تسوّق حسب القسم</h2></header><div class="scenes">' +
     DATA.categories.map((c) => {
