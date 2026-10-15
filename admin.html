@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>لوحة تحكم SOLO SUITS</title>
+
+    <link rel="icon" type="image/jpeg" href="assets/images/icon-192.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&family=Tajawal:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0A0A0A;
+            --black-soft: #1A1A1A;
+            --black-light: #2A2A2A;
+            --gray-soft: #F5F5F5;
+            --gray-light: #EDEDED;
+            --gray-mid: #B8B8B8;
+            --gray-dark: #7A7A7A;
+            --white: #FFFFFF;
+            --gold: #B8935A;
+            --gold-light: #D4B074;
+            --gold-dark: #8B6E2E;
+            --text: #0A0A0A;
+            --text-soft: #3A3A3A;
+            --text-muted: #7A7A7A;
+            --panel: #FFFFFF;
+            --border: #E5E5E5;
+            --danger: #C0392B;
+            --success: #27AE60;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --shadow-strong: rgba(0, 0, 0, 0.15);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background: var(--gray-soft);
+            min-height: 100vh;
+            color: var(--text);
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* ============ Login ============ */
+        .login-wrap {
+            max-width: 460px;
+            margin: 8vh auto;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 44px 36px;
+            text-align: center;
+            box-shadow: 0 20px 60px var(--shadow-strong);
+        }
+
+        .login-wrap h1 {
+            font-family: 'Inter', 'Cairo', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 6px;
+            letter-spacing: 4px;
+        }
+
+        .login-wrap .subtitle {
+            font-family: 'Inter', 'Cairo', sans-serif;
+            color: var(--gold-dark);
+            font-size: 0.85rem;
+            margin-bottom: 32px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+
+        .pw-wrap { position: relative; margin-bottom: 14px; }
+
+        .login-wrap input {
+            width: 100%;
+            padding: 16px 18px 16px 56px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: var(--gray-soft);
+            color: var(--text);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .login-wrap input:focus {
+            outline: none;
+            border-color: var(--black);
+            background: var(--white);
+        }
+
+        .toggle-pw {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .toggle-pw:hover { background: var(--gray-soft); }
+
+        #loginErr {
+            color: var(--danger);
+            font-size: 0.88rem;
+            margin-top: 16px;
+            min-height: 22px;
+            font-weight: 600;
+        }
+
+        .login-hint {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 26px;
+            line-height: 1.8;
+            text-align: right;
+            padding: 16px 18px;
+            background: var(--gray-soft);
+            border-radius: 4px;
+            border-right: 3px solid var(--gold);
+        }
+
+        /* ============ Buttons ============ */
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            padding: 14px 24px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        button:active { transform: scale(0.97); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+
+        .btn-primary {
+            background: var(--black);
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: var(--black-soft);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--black);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover { background: var(--gray-soft); border-color: var(--black); }
+
+        .btn-danger {
+            background: transparent;
+            color: var(--danger);
+            border: 1px solid var(--danger);
+            padding: 8px 14px;
+            font-size: 0.82rem;
+        }
+
+        .btn-danger:hover { background: var(--danger); color: var(--white); }
+
+        .btn-add {
+            background: transparent;
+            color: var(--black);
+            border: 1px dashed var(--gray-mid);
+            width: 100%;
+            padding: 18px;
+            font-size: 0.95rem;
+            margin-top: 14px;
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-add:hover { background: var(--gray-soft); border-color: var(--black); border-style: solid; }
+
+        /* ============ Main ============ */
+        #dashboard {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: none;
+        }
+
+        #dashboard.active { display: block; }
+
+        /* ============ Header ============ */
+        .admin-header {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 22px 28px;
+            margin-bottom: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            position: sticky;
+            top: 14px;
+            z-index: 50;
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .admin-header h1 {
+            font-family: 'Inter', 'Cairo', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--black);
+            letter-spacing: 4px;
+            margin: 0;
+        }
+
+        .admin-header h1 span {
+            color: var(--gold-dark);
+            font-weight: 600;
+        }
+
+        .admin-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+        /* ============ Cards ============ */
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 26px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-title .title-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .card-title .zone-icon { font-size: 1.5rem; }
+
+        .card-title .toggle-chev {
+            font-size: 1rem;
+            transition: transform 0.2s;
+            color: var(--text-muted);
+        }
+
+        .card-title .toggle-chev.open { transform: rotate(180deg); }
+
+        .type-badge {
+            font-size: 0.75rem;
+            background: var(--gray-soft);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 4px 12px;
+            font-weight: 600;
+        }
+
+        .zone-body { display: none; }
+        .zone-body.open { display: block; }
+
+        /* ============ Form Fields ============ */
+        label {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--text-soft);
+            margin-bottom: 8px;
+            margin-top: 16px;
+            font-weight: 700;
+        }
+
+        input[type=text],
+        input[type=number],
+        input[type=password],
+        textarea {
+            width: 100%;
+            background: var(--gray-soft);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 4px;
+            padding: 14px 16px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--black);
+            background: var(--white);
+        }
+
+        textarea { resize: vertical; min-height: 80px; line-height: 1.7; }
+
+        /* ============ Product Box ============ */
+        .item-box {
+            background: var(--gray-soft);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 22px;
+            margin-top: 16px;
+            position: relative;
+        }
+
+        .item-box .item-num {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 999px;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 8px;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+
+        /* ============ Images Grid ============ */
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 14px;
+            margin-top: 12px;
+        }
+
+        .img-cell { display: flex; flex-direction: column; gap: 6px; }
+
+        .img-thumb {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--gray-light);
+            transition: border-color 0.2s;
+        }
+
+        .img-thumb:hover { border-color: var(--black); }
+
+        .img-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-thumb .img-del {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: var(--danger);
+            color: var(--white);
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .img-add-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            aspect-ratio: 1 / 1;
+            border: 1px dashed var(--gray-mid);
+            border-radius: 4px;
+            background: var(--white);
+            color: var(--black);
+            font-size: 1.8rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .img-add-btn:hover {
+            background: var(--gray-soft);
+            border-color: var(--black);
+            border-style: solid;
+        }
+
+        .img-add-btn small { font-size: 0.8rem; font-weight: 600; }
+
+        input[type="file"] { display: none; }
+
+        /* ============ Colors Editor ============ */
+        .colors-editor {
+            background: var(--white);
+            border: 1px dashed var(--gray-mid);
+            border-radius: 6px;
+            padding: 20px;
+            margin: 18px 0 12px;
+        }
+
+        .colors-editor > label {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--black);
+            font-size: 0.95rem;
+        }
+
+        .colors-hint {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 8px;
+            line-height: 1.7;
+        }
+
+        .color-chips-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .color-chip-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--white);
+            color: var(--text);
+            font: inherit;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .color-chip-btn:hover { border-color: var(--black); }
+
+        .color-chip-btn.on {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+        }
+
+        .color-chip-btn.off {
+            opacity: 0.4;
+            text-decoration: line-through;
+        }
+
+        .color-chip-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            display: inline-block;
+        }
+
+        /* ============ Offers ============ */
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .offer-card {
+            background: var(--gray-soft);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 14px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: border-color 0.2s;
+        }
+
+        .offer-card:hover { border-color: var(--black); }
+
+        .offer-card .offer-num {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 999px;
+            z-index: 2;
+        }
+
+        .offer-card .offer-img-box {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--gray-light);
+            border: 1px solid var(--border);
+        }
+
+        .offer-card .offer-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .offer-card .offer-img-box .offer-img-del {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: var(--danger);
+            color: #fff;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .offer-card .offer-img-box .offer-img-change {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .offer-card .offer-img-add {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            aspect-ratio: 1 / 1;
+            border: 1px dashed var(--gray-mid);
+            border-radius: 4px;
+            background: var(--white);
+            color: var(--black);
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .offer-card .offer-img-add:hover { background: var(--gray-soft); border-color: var(--black); }
+        .offer-card .offer-img-add small { font-size: 0.72rem; font-weight: 600; }
+
+        .offer-card .offer-text-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        .offer-card .offer-text-input {
+            width: 100%;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 12px 14px;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text);
+            min-height: 70px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .offer-card .offer-text-input:focus { outline: none; border-color: var(--black); }
+
+        .offer-card .offer-del-btn {
+            background: transparent;
+            color: var(--danger);
+            border: 1px solid var(--danger);
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+
+        .offer-card .offer-del-btn:hover { background: var(--danger); color: #fff; }
+
+        /* ============ Sizes ============ */
+        .size-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
+        .size-chip {
+            background: var(--white);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .size-chip:hover { border-color: var(--black); transform: translateY(-2px); }
+
+        .size-chip.selected {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+        }
+
+        .selected-sizes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 14px;
+            padding: 18px;
+            background: var(--white);
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            min-height: 60px;
+        }
+
+        .selected-size-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--gray-soft);
+            border-radius: 4px;
+            border-right: 3px solid var(--gold);
+        }
+
+        .selected-size-row .sz-label {
+            flex: 1;
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--black);
+            min-width: 80px;
+        }
+
+        .selected-size-row .sz-price-input {
+            width: 120px;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .selected-size-row .sz-price-input:focus {
+            outline: none;
+            border-color: var(--black);
+        }
+
+        .selected-size-row .sz-del {
+            background: var(--danger);
+            color: var(--white);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* ============ Status Toast ============ */
+        #statusMsg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            max-width: 460px;
+            margin: 0 auto;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 18px 24px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: none;
+            z-index: 100;
+            box-shadow: 0 15px 40px var(--shadow-strong);
+        }
+
+        #statusMsg.show { display: block; }
+        #statusMsg.ok { border-color: var(--success); color: var(--success); }
+        #statusMsg.err { border-color: var(--danger); color: var(--danger); }
+        #statusMsg.loading { border-color: var(--gold); color: var(--gold-dark); }
+
+        /* ============ Loading Overlay ============ */
+        #loadingOverlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 200;
+            backdrop-filter: blur(8px);
+        }
+
+        #loadingOverlay.show { display: flex; }
+
+        .loader {
+            background: var(--white);
+            padding: 40px 50px;
+            border-radius: 6px;
+            text-align: center;
+            max-width: 340px;
+        }
+
+        .loader .spinner {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--border);
+            border-top-color: var(--black);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .loader p {
+            font-weight: 700;
+            color: var(--black);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ============ Visibility Toggle ============ */
+        .vis-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            border: 1px solid var(--border);
+            user-select: none;
+            transition: all 0.2s;
+        }
+
+        .vis-toggle.on {
+            background: rgba(39, 174, 96, 0.1);
+            border-color: var(--success);
+            color: var(--success);
+        }
+
+        .vis-toggle.off {
+            background: rgba(192, 57, 43, 0.1);
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+
+        /* ============ Save Bar ============ */
+        .save-bar {
+            position: sticky;
+            bottom: 16px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 24px;
+            box-shadow: 0 -8px 30px var(--shadow-strong);
+            z-index: 40;
+        }
+
+        .save-bar button { width: 100%; padding: 20px; font-size: 1.05rem; }
+
+        /* ============ Responsive ============ */
+        @media (max-width: 600px) {
+            body { padding: 10px; font-size: 15px; }
+            .admin-header { padding: 18px; gap: 12px; }
+            .admin-header h1 { font-size: 1.2rem; letter-spacing: 2px; }
+            .admin-actions { width: 100%; justify-content: stretch; }
+            .admin-actions button { flex: 1; padding: 12px 14px; font-size: 0.85rem; }
+            .card { padding: 20px; }
+            .item-box { padding: 18px; }
+            .selected-size-row .sz-price-input { width: 90px; }
+            .offers-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ Login Screen ============ -->
+<div id="loginScreen" class="login-wrap">
+    <h1>SOLO</h1>
+    <p class="subtitle">SUITS — ADMIN</p>
+
+    <div class="pw-wrap">
+        <input type="text" id="ownerInput" placeholder="اسم المستخدم/المنظمة في GitHub" autocomplete="off">
+    </div>
+    <div class="pw-wrap">
+        <input type="text" id="repoInput" placeholder="اسم الريبو (مثال: solo-suits)" autocomplete="off">
+    </div>
+    <div class="pw-wrap">
+        <input type="text" id="folderInput" placeholder="اسم الفولدر داخل الريبو (اتركه فاضي لو في الجذر)" autocomplete="off">
+    </div>
+    <div class="pw-wrap">
+        <input type="password" id="pwInput" placeholder="أدخل رمز الدخول (GitHub Token)" autocomplete="off">
+        <button type="button" id="togglePw" class="toggle-pw">👁️</button>
+    </div>
+
+    <button class="btn-primary" style="width:100%;" id="loginBtn">🔓 دخول</button>
+    <div id="loginErr"></div>
+
+    <p class="login-hint">
+        <strong>ملاحظات مهمة:</strong><br>
+        • أول 3 خانات بتحدد مكان الريبو بتاعك على GitHub.<br>
+        • التوكن بيتحفظ في المتصفح ده بس.<br>
+        • محتاج توكن GitHub بصلاحية <strong>repo</strong>.
+    </p>
+</div>
+
+<!-- ============ Loading Overlay ============ -->
+<div id="loadingOverlay">
+    <div class="loader">
+        <div class="spinner"></div>
+        <p id="loadingText">جاري التحميل...</p>
+    </div>
+</div>
+
+<!-- ============ Dashboard ============ -->
+<div id="dashboard">
+
+    <header class="admin-header">
+        <h1>SOLO <span>SUITS</span></h1>
+        <div class="admin-actions">
+            <button class="btn-secondary" id="reloadBtn">↻ تحديث</button>
+            <button class="btn-primary" id="saveBtn">💾 حفظ</button>
+            <button class="btn-secondary" id="logoutBtn">🔑 خروج</button>
+        </div>
+    </header>
+
+    <!-- Config -->
+    <div class="card">
+        <div class="card-title">
+            <span class="title-info">
+                <span class="zone-icon">⚙️</span>
+                <span>الإعدادات العامة</span>
+            </span>
+        </div>
+        <div id="configFields"></div>
+    </div>
+
+    <!-- Featured -->
+    <div class="card">
+        <div class="card-title">
+            <span class="title-info">
+                <span class="zone-icon">⭐</span>
+                <span>الصور المميزة (سلايدر)</span>
+            </span>
+        </div>
+        <div id="featuredFields"></div>
+    </div>
+
+    <!-- Offers -->
+    <div class="card">
+        <div class="card-title">
+            <span class="title-info">
+                <span class="zone-icon">🔥</span>
+                <span>عروض وخصومات</span>
+                <span class="type-badge" id="offersCount">0 عرض</span>
+            </span>
+        </div>
+        <div id="offersFields"></div>
+    </div>
+
+    <!-- Colors (Global) -->
+    <div class="card">
+        <div class="card-title">
+            <span class="title-info">
+                <span class="zone-icon">🎨</span>
+                <span>الألوان المتاحة (عام)</span>
+            </span>
+        </div>
+        <div id="colorsFields"></div>
+    </div>
+
+    <!-- Zones -->
+    <div id="zonesWrap"></div>
+
+    <button class="btn-add" id="addZoneBtn">+ إضافة قسم جديد</button>
+
+    <!-- Save Bar -->
+    <div class="save-bar">
+        <button class="btn-primary" id="saveBtnBottom">💾 حفظ كل التعديلات</button>
+    </div>
+
+</div>
+
+<div id="statusMsg"></div>
+
+<script src="admin.js"></script>
+</body>
+</html>
