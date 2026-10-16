@@ -35,7 +35,9 @@ const ICON = {
   dl: '<path d="M12 4v11M7.5 11l4.5 4.5 4.5-4.5M5 20h14"/>',
   chevL: '<path d="M15 6l-6 6 6 6"/>',
   chevR: '<path d="M9 6l6 6-6 6"/>',
-  tag: '<path d="M4 12.5V5h7.5L20 13.5 13.5 20 4 12.5z"/><circle cx="8.5" cy="9" r="1.2"/>'
+  tag: '<path d="M4 12.5V5h7.5L20 13.5 13.5 20 4 12.5z"/><circle cx="8.5" cy="9" r="1.2"/>',
+  soundOn: '<path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/>',
+  soundOff: '<path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/>'
 };
 const svg = (n) => '<svg class="svg" viewBox="0 0 24 24" aria-hidden="true">' + ICON[n] + '</svg>';
 
@@ -56,6 +58,25 @@ let splashDone = false;
 let deferredPrompt = null;
 let installShown = false;
 const scrollPos = {};
+/* حماية اللمس العفوي: اللمسة اللي بتوقّف سكرول، أو اللي فيها تحريك، أو الضغطة الطويلة مش بتفتح أي قسم */
+let lastScrollAt = 0;
+const TAP_MOVE = 6, TAP_MAX_MS = 450, SCROLL_QUIET_MS = 700, TAP_MIN_MS = 80;
+const tap = { x: 0, y: 0, t: 0, ok: true };
+addEventListener('scroll', () => { lastScrollAt = Date.now(); }, { passive: true });
+document.addEventListener('pointerdown', (e) => {
+  tap.x = e.clientX; tap.y = e.clientY; tap.t = Date.now();
+  tap.ok = (tap.t - lastScrollAt) > SCROLL_QUIET_MS;
+}, true);
+document.addEventListener('pointermove', (e) => {
+  if (tap.ok && Math.hypot(e.clientX - tap.x, e.clientY - tap.y) > TAP_MOVE) tap.ok = false;
+}, true);
+document.addEventListener('click', (e) => {
+  if (!e.detail) return; // ضغطة من الكيبورد/قارئ الشاشة
+  const a = e.target.closest('#app a[href]');
+  if (!a) return;
+  const dt = Date.now() - tap.t;
+  if (!tap.ok || dt > TAP_MAX_MS || dt < TAP_MIN_MS) { e.preventDefault(); e.stopImmediatePropagation(); }
+}, true);
 const cleanups = [];
 const filters = {};
 const sorts = {};
@@ -63,9 +84,10 @@ const sorts = {};
 const DEFAULTS = {
   storeName: 'SOLO SUITS', whatsapp: '201004929979', phone: '01004929979', email: 'solosuits743@gmail.com',
   facebook: 'https://www.facebook.com/profile.php?id=61580442328923', instagram: 'https://www.instagram.com/solo_suits.eg',
-  address: 'الإسكندرية', mapQuery: 'Alexandria, Egypt', currency: 'ج.م'
+  address: 'الإسكندرية', mapQuery: 'Solo suits Alexandria Egypt', mapUrl: 'https://maps.app.goo.gl/QUTqnwGvpsTDGQQp7', currency: 'ج.م'
 };
 const S = () => Object.assign({}, DEFAULTS, (DATA && DATA.settings) || {});
+const mapHref = () => { const s = S(); return s.mapUrl || ('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.mapQuery || s.address)); };
 
 /* ---------- data helpers ---------- */
 const catById = (id) => DATA.categories.find((c) => c.id === id);
@@ -276,7 +298,7 @@ function coverflow(root, items, caption) {
 
   const step = () => (slides[0].offsetWidth || 260) * 0.56;
   stage.addEventListener('pointerdown', (e) => {
-    drag = { x: e.clientX, start: pos, moved: 0, target: e.target.closest('.cf-slide') };
+    drag = { x: e.clientX, start: pos, moved: 0, t: Date.now(), real: (Date.now() - lastScrollAt) > SCROLL_QUIET_MS, target: e.target.closest('.cf-slide') };
     stage.setPointerCapture(e.pointerId);
     stage.classList.add('dragging');
     pause();
@@ -293,7 +315,8 @@ function coverflow(root, items, caption) {
     const d = drag;
     drag = null;
     stage.classList.remove('dragging');
-    if (d.moved < 8 && d.target) {
+    if (d.moved < TAP_MOVE && d.target) {
+      if (!d.real || (Date.now() - d.t) > TAP_MAX_MS) { go(Math.round(pos)); return; }
       const i = +d.target.dataset.i;
       const o = n > 2 ? wrap(i - pos) : i - pos;
       if (Math.abs(o) < 0.4) { const link = items[i].href; if (link) navigate(link); return; }
@@ -330,14 +353,15 @@ function footerHTML() {
   return '<footer class="foot"><img src="assets/images/logo-light.png" alt="SOLO SUITS">' +
     '<p class="foot-tag"><b>S</b>TYLE <b>O</b>F <b>L</b>UXURY <b>O</b>UTFITS</p>' +
     '<address>' + esc(s.address) + '</address>' +
-    '<a class="btn btn-line" style="border-color:#fff;color:#fff" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.mapQuery || s.address) + '">' + svg('pin') + ' الموقع على الخريطة</a>' +
+    '<a class="btn btn-line" style="border-color:#fff;color:#fff" target="_blank" rel="noopener" href="' + esc(mapHref()) + '">' + svg('pin') + ' الموقع على الخريطة</a>' +
     '<div class="foot-links">' +
     '<a href="' + waLink('أهلاً SOLO SUITS، عندي استفسار') + '" target="_blank" rel="noopener" aria-label="واتساب">' + svg('wa') + '</a>' +
     '<a href="tel:' + esc(s.phone) + '" aria-label="اتصال">' + svg('phone') + '</a>' +
     (s.facebook ? '<a href="' + esc(s.facebook) + '" target="_blank" rel="noopener" aria-label="فيسبوك">' + svg('fb') + '</a>' : '') +
     (s.instagram ? '<a href="' + esc(s.instagram) + '" target="_blank" rel="noopener" aria-label="إنستجرام">' + svg('ig') + '</a>' : '') +
     (s.email ? '<a href="mailto:' + esc(s.email) + '" aria-label="بريد إلكتروني">' + svg('mail') + '</a>' : '') +
-    '</div><small>© SOLO SUITS</small></footer>';
+    '</div><small>© SOLO SUITS</small>' +
+    '<a class="foot-credit" href="https://mydigital-id.github.io" target="_blank" rel="noopener">تصميم وتطوير <b>My Digital ID</b></a></footer>';
 }
 
 function cardHTML(p) {
@@ -362,7 +386,7 @@ function home() {
     DATA.categories.map((c) => {
       const count = visible().filter((p) => p.category === c.id).length;
       return '<a class="scene" href="#/c/' + esc(c.id) + '">' + im(c.image, c.name) +
-        '<div class="scene-copy"><span class="scene-en">' + esc(c.en || '') + '</span><h2>' + esc(c.name) + '</h2><div class="scene-meta"><i></i><span>' + fmt(count) + ' قطعة</span></div></div></a>';
+        '<div class="scene-copy"><span class="scene-en">' + esc(c.en || '') + '</span><h2' + (c.name.length > 8 ? ' class="long"' : '') + '>' + esc(c.name) + '</h2><div class="scene-meta"><i></i><span>' + fmt(count) + ' قطعة</span></div></div></a>';
     }).join('') + '</div></section>' +
     (offers.length ? '<section class="block"><header class="block-head row"><div><h2>عروض وخصومات</h2><p>أسعار خاصة لفترة محدودة.</p></div><a class="more" href="#/offers">عرض الكل</a></header><div class="cf" id="cfOffers"></div></section>' : '') +
     footerHTML();
@@ -547,7 +571,7 @@ function buildMenu() {
     cats.map((c) => '<a href="#/c/' + esc(c.id) + '">' + esc(c.name) + '<span class="en">' + esc(c.en || '') + '</span></a>').join('') +
     '<a href="#/offers">' + svg('tag') + ' عروض وخصومات</a>' +
     '<span class="group">تواصل معنا</span>' +
-    '<a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.mapQuery || s.address) + '">' + svg('pin') + ' الموقع على الخريطة</a>' +
+    '<a target="_blank" rel="noopener" href="' + esc(mapHref()) + '">' + svg('pin') + ' الموقع على الخريطة</a>' +
     '<a target="_blank" rel="noopener" href="' + waLink('أهلاً SOLO SUITS، عندي استفسار') + '">' + svg('wa') + ' واتساب</a>' +
     '<a href="tel:' + esc(s.phone) + '">' + svg('phone') + ' ' + esc(s.phone) + '</a>' +
     (s.facebook ? '<a target="_blank" rel="noopener" href="' + esc(s.facebook) + '">' + svg('fb') + ' فيسبوك</a>' : '') +
@@ -664,9 +688,25 @@ function runSplash() {
     setTimeout(showInstall, 900);
   }
   function fallback() {
+    snd.hidden = true;
     sp.classList.add('no-video');
     setTimeout(finish, 2400);
   }
+  const snd = document.createElement('button');
+  snd.type = 'button';
+  snd.className = 'splash-sound';
+  const paintSnd = () => {
+    snd.innerHTML = svg(v.muted ? 'soundOff' : 'soundOn');
+    snd.setAttribute('aria-label', v.muted ? 'تشغيل الصوت' : 'كتم الصوت');
+  };
+  paintSnd();
+  snd.addEventListener('click', (e) => {
+    e.stopPropagation();
+    v.muted = !v.muted;
+    if (v.paused) { const pp = v.play(); if (pp && pp.catch) pp.catch(() => {}); }
+    paintSnd();
+  });
+  sp.appendChild(snd);
   v.addEventListener('ended', finish);
   v.addEventListener('error', fallback);
   const src = v.querySelector('source');

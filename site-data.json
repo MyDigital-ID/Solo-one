@@ -52,6 +52,47 @@
         "معاطف",
         "أحذية وحقائب"
       ]
+    },
+    {
+      "id": "coats",
+      "name": "بلاطي",
+      "en": "Coats",
+      "image": "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1200&q=80",
+      "subs": [
+        "رجالي",
+        "حريمي"
+      ]
+    },
+    {
+      "id": "ties",
+      "name": "كرافتات",
+      "en": "Ties",
+      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "subs": []
+    },
+    {
+      "id": "shoes",
+      "name": "أحذية جلد طبيعي",
+      "en": "Leather Shoes",
+      "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=80",
+      "subs": [
+        "رجالي",
+        "نسائي"
+      ]
+    },
+    {
+      "id": "belts",
+      "name": "أحزمة جلد طبيعي",
+      "en": "Leather Belts",
+      "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80",
+      "subs": []
+    },
+    {
+      "id": "kids",
+      "name": "ملابس أطفال",
+      "en": "Kids",
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1200&q=80",
+      "subs": []
     }
   ],
   "featured": [
