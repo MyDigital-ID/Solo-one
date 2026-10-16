@@ -1,97 +1,51 @@
 // ============================================================
 // SOLO SUITS — Site Data Loader
-// بيحمّل site-data.json مع caching و fallback
+// بيحمّل site-data.json (من الشبكة أولاً عشان تعديلات لوحة التحكم تظهر فوراً)
+// ولو مفيش إنترنت بيرجع لآخر نسخة محفوظة على الجهاز
 // ============================================================
 
 (function () {
   'use strict';
 
-  const DATA_URL = 'site-data.json';
-  const CACHE_KEY = 'solo_site_data_v1';
-  const CACHE_TIME_KEY = 'solo_site_data_time_v1';
-  const CACHE_TTL = 5 * 60 * 1000; // 5 دقائق
+  const DATA_URL  = 'site-data.json';
+  const CACHE_KEY = 'solo_data';   // نفس المفتاح اللي كان بيستخدمه الموقع، فالنسخ المحفوظة قبل كده تفضل شغالة
 
-  async function loadSiteData(onFresh) {
+  function readCache() {
     try {
-      const cachedTime = parseInt(localStorage.getItem(CACHE_TIME_KEY) || '0', 10);
-      const now = Date.now();
-
-      // لو الكاش لسه صالح، استخدمه فورًا
-      if (cachedTime && (now - cachedTime) < CACHE_TTL) {
-        const cached = localStorage.getItem(CACHE_KEY);
-        if (cached) {
-          try {
-            const parsed = JSON.parse(cached);
-            console.log('📦 Loaded from cache');
-            // نحدّث في الخلفية
-            fetchFreshData().then((fresh) => {
-              if (fresh && typeof onFresh === 'function') onFresh(fresh);
-            }).catch(() => {});
-            return parsed;
-          } catch (e) {
-            console.warn('⚠️ Cache parse failed, fetching fresh');
-          }
-        }
-      }
-
-      // تحميل من الشبكة
-      return await fetchFreshData();
-
-    } catch (error) {
-      console.error('❌ Failed to load site data:', error);
-
-      // آخر محاولة: جرب الكاش حتى لو منتهي
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (cached) {
-        try {
-          console.log('📦 Fallback to old cache');
-          return JSON.parse(cached);
-        } catch (e) {}
-      }
-
-      throw error;
-    }
+      const raw = localStorage.getItem(CACHE_KEY);
+      const parsed = raw ? JSON.parse(raw) : null;
+      return parsed && typeof parsed === 'object' ? parsed : null;
+    } catch (e) { return null; }
   }
 
-  async function fetchFreshData() {
-    const response = await fetch(`${DATA_URL}?t=${Date.now()}`, {
-      cache: 'no-store',
-      headers: { 'Accept': 'application/json' }
-    });
+  function writeCache(data) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify(data)); }
+    catch (e) { /* التخزين ممتلئ أو التصفح الخاص */ }
+  }
 
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const data = await response.json();
-
-    if (!data || typeof data !== 'object') {
-      throw new Error('Invalid data format');
-    }
-
-    try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify(data));
-      localStorage.setItem(CACHE_TIME_KEY, String(Date.now()));
-    } catch (e) {
-      console.warn('⚠️ Could not cache data:', e.message);
-    }
-
-    console.log('🌐 Loaded fresh from network');
+  async function fetchFresh() {
+    const res = await fetch(DATA_URL, { cache: 'no-cache' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    if (!data || typeof data !== 'object') throw new Error('Invalid data format');
+    writeCache(data);
     return data;
   }
 
-  function clearSiteDataCache() {
-    localStorage.removeItem(CACHE_KEY);
-    localStorage.removeItem(CACHE_TIME_KEY);
-    console.log('🗑️ Site data cache cleared');
+  // network-first: لو الشبكة وقعت نرجع للنسخة المحفوظة، ولو مفيش نسخة نرمي الخطأ
+  async function load() {
+    try {
+      return await fetchFresh();
+    } catch (err) {
+      const cached = readCache();
+      if (cached) return cached;
+      throw err;
+    }
   }
 
-  window.SiteDataLoader = {
-    load: loadSiteData,
-    clearCache: clearSiteDataCache,
-    DATA_URL
-  };
+  function clearCache() {
+    try { localStorage.removeItem(CACHE_KEY); } catch (e) { /* ignore */ }
+  }
 
-  console.log('✅ Site Data Loader ready');
-
+  window.SiteDataLoader = { load: load, clearCache: clearCache, DATA_URL: DATA_URL };
 })();

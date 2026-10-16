@@ -1,6 +1,7 @@
 /* SOLO SUITS — storefront
    - كل المسارات نسبية، يشتغل على أي حساب/مستودع GitHub
    - البيانات في site-data.json (لوحة التحكم admin.html بتعدّل عليه مباشرة في GitHub)
+   - تحميل البيانات في site-data-loader.js، والـ service worker في service-worker.js
 */
 (() => {
 'use strict';
@@ -60,7 +61,7 @@ let installShown = false;
 const scrollPos = {};
 /* حماية اللمس العفوي: اللمسة اللي بتوقّف سكرول، أو اللي فيها تحريك، أو الضغطة الطويلة مش بتفتح أي قسم */
 let lastScrollAt = 0;
-const TAP_MOVE = 6, TAP_MAX_MS = 450, SCROLL_QUIET_MS = 700, TAP_MIN_MS = 80;
+const TAP_MOVE = 6, TAP_MAX_MS = 450, SCROLL_QUIET_MS = 700, TAP_MIN_MS = 90;
 const tap = { x: 0, y: 0, t: 0, ok: true };
 addEventListener('scroll', () => { lastScrollAt = Date.now(); }, { passive: true });
 document.addEventListener('pointerdown', (e) => {
@@ -118,18 +119,10 @@ function priceHTML(p, size) {
 }
 const discountPct = (p) => { const b = bestOffer(p); return b ? Math.round((1 - b / p.price) * 100) : 0; };
 
-async function loadData() {
-  try {
-    const r = await fetch('site-data.json', { cache: 'no-cache' });
-    if (!r.ok) throw new Error('bad status');
-    const d = await r.json();
-    store.set('solo_data', d);
-    return d;
-  } catch (e) {
-    const c = store.get('solo_data', null);
-    if (c) return c;
-    throw e;
-  }
+function loadData() {
+  // التحميل بقى في ملف مستقل: site-data-loader.js
+  if (!window.SiteDataLoader) return Promise.reject(new Error('site-data-loader.js missing'));
+  return window.SiteDataLoader.load();
 }
 
 /* ---------- toast ---------- */
@@ -753,7 +746,7 @@ function collectUrls() {
 }
 function registerSW() {
   if (!('serviceWorker' in navigator)) return;
-  navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then((reg) => {
+  navigator.serviceWorker.register('service-worker.js').then(() => navigator.serviceWorker.ready).then((reg) => {
     const send = () => { if (reg.active && DATA) reg.active.postMessage({ type: 'CACHE_URLS', urls: collectUrls() }); };
     (window.requestIdleCallback || ((f) => setTimeout(f, 2500)))(send);
   }).catch(() => { /* SW not available (file:// or blocked) */ });
