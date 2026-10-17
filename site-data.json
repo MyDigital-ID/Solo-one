@@ -96,6 +96,12 @@
     }
   ],
   "featured": [
+      {
+      "image": "./assets/uploads/featured-image-1.jpg",
+      "title": "صورة تجريبية",
+      "sub": "اختبار رفع الصور من GitHub",
+      "link": "#/c/test"
+    },
     {
       "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
       "title": "مجموعة البدل الرسمية",
